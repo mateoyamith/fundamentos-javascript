@@ -22,15 +22,23 @@ function imprimirNombreMayusculas2(persona) {
     console.log(nombre.toLowerCase());
 }
 
+imprimirNombreMayusculas(mateo);
+imprimirNombreMayusculas2(mafe);
+imprimirNombreMayusculas({ nombre: 'Pepito' });
+
 function imprimirNombreYedad(persona) {
     var { nombre } = persona;
     var { edad } = persona;
     console.log(`Hola, me llamo ${nombre} y tengo ${edad} años`);
 }
 
-/*imprimirNombreMayusculas(mateo);
-imprimirNombreMayusculas2(mafe);
-imprimirNombreMayusculas({ nombre: 'Pepito' });*/
-
 imprimirNombreYedad(mateo);
 imprimirNombreYedad(mafe);
+
+function cumpleannios(persona) {
+    return {
+        ...persona,
+        edad: persona.edad + 1,
+        modelo: 2021 - persona.edad
+    }
+}

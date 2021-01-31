@@ -35,8 +35,7 @@ function imprimirProfesiones(persona) {
 imprimirProfesiones(sacha);
 
 function imprimirSiEsMayorDeEdad(persona) {
-    console.log(`${persona.nombre} es:`)
-    console.log(persona.edad >= 18 ? 'Mayor de edad' : 'Menor de edad');
+    console.log(persona.edad >= 18 ? `${persona.nombre} es mayor de edad` : `${persona.nombre} es menor de edad`);
 }
 
 imprimirSiEsMayorDeEdad(sacha);

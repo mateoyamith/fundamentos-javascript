@@ -39,3 +39,8 @@ function imprimirSiEsMayorDeEdad(persona) {
 }
 
 imprimirSiEsMayorDeEdad(sacha);
+
+const MAYORIA_EDAD = 18
+const esMayorEdad = ({ edad }) => console.log(edad >= 18 ? `${edad} es mayor de edad` : `${edad} es menor de edad`);
+
+console.log(esMayorEdad(sacha));

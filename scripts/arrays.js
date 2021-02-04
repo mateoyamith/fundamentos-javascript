@@ -48,3 +48,18 @@ var personasAltasAnonima = personas.filter(function(persona) {
 console.log(personasBajas);
 
 //personas.forEach(persona => console.log(`${persona.nombre} mide ${persona.altura}mts`));
+
+const pasarAlturaACms1 = persona => {
+    return {
+        ...persona,
+        altura: persona.altura * 100
+    };
+}
+
+const pasarAlturaACms = persona => ({
+    ...persona,
+    altura: persona.altura * 100
+})
+
+var personasCms = personas.map(pasarAlturaACms);
+console.log(personasCms);

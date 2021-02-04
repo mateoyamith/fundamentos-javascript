@@ -28,7 +28,7 @@ while (mateo.peso > META) {
 
 console.log(`Pasaron ${dias} días hasta que ${mateo.nombre} adelgazo 3kg`);
 
-/*
+
 for (let index = 1; index <= 365; index++) {
     var random = Math.random();
     if (random < 0.25) {
@@ -39,4 +39,3 @@ for (let index = 1; index <= 365; index++) {
 }
 
 console.log(`Al final del año ${mateo.nombre} pesa ${mateo.peso.toFixed(2)}kg`);
-*/

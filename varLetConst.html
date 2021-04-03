@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var usuario = {
+            nombre: 'Mateo',
+            apellido: 'Sanchez',
+            edad: 25
+        }
+
+        function esMayorDeEdad(persona) {
+            // lo que sucede con var es que puede ser utilizada en el housting
+            if (persona.edad > 18) {
+                var mensaje = 'Es mayor de edad';
+            } else {
+                var mensaje = 'Es menor de edad';
+                var mensaje2 = 'Mensaje 2';
+            }
+            console.log(mensaje);
+            console.log(mensaje2);
+        }
+        //esMayorDeEdad(usuario);
+
+        function esMayorDeEdadLet(persona) {
+            // lo que sucede con let es que su alcance solo va ser utilizada en el bloque donde fue declarada
+            if (persona.edad > 18) {
+                let mensaje = 'Es mayor de edad';
+            } else {
+                let mensaje = 'Es menor de edad';
+            }
+            console.log(mensaje);
+        }
+        //esMayorDeEdadLet(usuario);
+
+        function esMayorDeEdadConst(persona) {
+            // Lo que sucede con const es que no se puede reemplazar el valor
+            // Si es declarado como lista no se puede reemplazar la lista, pero si puede eliminar y agregar valores a esta
+            const MAYORIA_EDAD = 18;
+            let mensaje;
+            if (persona.edad > MAYORIA_EDAD) {
+                mensaje = 'Es mayor de edad';
+            } else {
+                mensaje = 'Es menor de edad';
+            }
+            console.log(mensaje);
+        }
+        esMayorDeEdadConst(usuario);
+    </script>
+</body>
+
+</html>

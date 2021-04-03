@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const usuario = {
+            nombre: 'Mateo',
+            apellido: 'Sanchez',
+            edad: 25
+        }
+
+        //Ejemplo con bind
+        function saludar() {
+            console.log(`Hola, mi nombre es ${this.nombre}`)
+        }
+
+        const saludarAUsuario = saludar.bind(usuario);
+
+        //Ejemplo con call
+        function saludarCall(saludo = 'Hola') {
+            console.log(`${saludo}, mi nombre es ${this.nombre}`)
+        }
+
+        // saludarCall.call(usuario, 'Hola parce');
+
+        // Ejemplo con apply
+        function saludarApply(saludo = 'Hola') {
+            console.log(`${saludo}, mi nombre es ${this.nombre}`)
+        }
+
+        saludarApply.apply(usuario, ['Hola parce']);
+    </script>
+</body>
+
+</html>
